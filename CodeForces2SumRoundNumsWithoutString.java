@@ -7,7 +7,7 @@ import java.util.Scanner;
 //Take a variable currentSum=1 and multiply it by 10 at each step
 //Checking if the number is divisible by 10
 //If not divisible, then multiply the number with currentSum, then multiply it by 10 . add result to ArrayList
-//If divisible, then also just multiply it by 10, don't add anything to ArrayList
+//If divisible, then also just multiply currentSum by 10, don't add anything to ArrayList
 //Traverse the ArrayList and print the element at each index
 
 public class CodeForces2SumRoundNumsWithoutString {
