@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CodeForce1920A {
+    public static void main(String[] args) {
+        ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<Integer> x = new ArrayList<>();
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+
+        while(t>0) {
+            int n=sc.nextInt();
+            int lower_bound=0;
+            int upper_bound=0;
+            int countNotEqualTo = 0;
+            while (n > 0) {
+                int a1 = sc.nextInt();
+                int x1 = sc.nextInt();
+                System.out.println();
+                n--;
+                a.add(a1);//1 5
+                x.add(x1);//2 4
+            }
+            for (int i = 0; i < a.size(); i++) {
+                if (a.get(i) == 1 && x.get(i) > lower_bound) {
+                    lower_bound = x.get(i);
+                } else if (a.get(i) == 2 && x.get(i) > upper_bound) {
+                    upper_bound = x.get(i);
+                }
+            }
+            //lower_bound=3
+            //upper_bound=10
+            //count=0
+            for (int i = 0; i < a.size(); i++) {
+                if (a.get(i) == 3 && x.get(i) >= lower_bound && x.get(i) <= upper_bound) {
+                    countNotEqualTo++;
+                }
+            }
+            System.out.print(upper_bound-lower_bound+1-countNotEqualTo);
+            t--;
+        }
+        }
+    }
